@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 87.4vh;
+  background: radial-gradient(
+    85.97% 68.26% at 50% 31.74%,
+    rgba(255, 255, 255, 0) 0%,
+    #e3f4ff 100%
+  );
+}
+.table {
+  width: 100%;
+  height: auto;
+}
+.table > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.table > div > label {
+  width: 25%;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px 5px;
+  margin: 3px 0px;
+}
+.table > div > span {
+  width: 25%;
+  text-align: center;
+  font-size: 25px;
+  margin: 20px 0px;
+}
+.pagination {
+  display: flex;
+  justify-content: end;
+  margin: 20px 30px auto auto;
+}

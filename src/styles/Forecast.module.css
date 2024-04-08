@@ -1,0 +1,38 @@
+.forecastContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.forecastList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.forecastItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.day {
+  font-weight: bold;
+  color: #333;
+}
+
+.temperature {
+  color: #555;
+}
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+}
