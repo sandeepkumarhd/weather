@@ -1,5 +1,5 @@
 .forecastContainer {
-  max-width: 800px;
+  width: 90%;
   margin: 20px auto;
   background-color: #fff;
   padding: 20px;
@@ -7,7 +7,10 @@
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.forecastContainer > h2 {
+  margin: 0px auto 30px auto;
+  font-size: 35px;
+}
 .forecastList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -15,24 +18,50 @@
 }
 
 .forecastItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
 
-.day {
+.date {
   font-weight: bold;
-  color: #333;
+  margin-bottom: 5px;
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
 }
 
 .temperature {
+  font-size: 18px;
+}
+
+.description {
+  margin-top: 5px;
   color: #555;
 }
 
-.weather-icon {
-  width: 30px;
-  height: 30px;
+.humidity {
+  margin-top: 5px;
+  color: #888;
+}
+.error {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+@media (max-width: 550px) {
+  .forecastContainer {
+    padding: 0px;
+  }
+  .forecastContainer > h2 {
+    margin: 15px auto 30px auto;
+    font-size: 35px;
+  }
 }

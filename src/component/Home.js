@@ -3,6 +3,7 @@ import { City } from "country-state-city";
 import styles from "../styles/Home.module.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Pagination } from "antd";
+import illustration from "../illustration.svg";
 const Home = () => {
   const [city, setCity] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,12 +24,22 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.home}>
+        <div>
+          {" "}
+          <h1>Today's Top Cities</h1>
+          <label>Today's Top Cities</label>
+        </div>
+        <div>
+          <img src={illustration} alt="illustration" />
+        </div>
+      </div>
       <section className={styles.table}>
         <div>
           <span>City Name</span>
-          <span>latitude</span>
-          <span>longitude</span>
-          <span>stateCode</span>
+          <span className={styles.IsMobile}>Latitude</span>
+          <span className={styles.IsMobile}>Longitude</span>
+          <span>State Code</span>
         </div>
 
         {city.length === 0 ? (
@@ -40,8 +51,8 @@ const Home = () => {
                 <label onClick={() => navigateToDetails(ele?.name)}>
                   {ele?.name}
                 </label>
-                <label>{ele?.latitude}</label>
-                <label>{ele?.longitude}</label>
+                <label className={styles.IsMobile}>{ele?.latitude}</label>
+                <label className={styles.IsMobile}>{ele?.longitude}</label>
                 <label>{ele?.stateCode}</label>
               </div>
             );

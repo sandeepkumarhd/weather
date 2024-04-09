@@ -6,6 +6,8 @@ import NavBar from "./component/NavBar";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Details from "./component/Details";
 import Page404 from "./component/Page404";
+import "react-toastify/dist/ReactToastify.css";
+
 const Kav = () => {
   return (
     <div>

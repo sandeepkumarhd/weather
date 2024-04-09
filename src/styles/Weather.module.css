@@ -1,0 +1,48 @@
+.error {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.weatherContainer {
+  max-width: 57%;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.weatherContainer > h2 {
+  font-size: 35px;
+  text-align: center;
+}
+.weatherInfo {
+  margin-top: 20px;
+}
+
+.temperature,
+.feelsLike,
+.description,
+.humidity,
+.pressure,
+.wind-speed,
+.clouds,
+.sunriseSunset {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+@media (max-width: 550px) {
+  .weatherContainer {
+    max-width: 80%;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
