@@ -16,6 +16,13 @@ const Details = () => {
   const [forecast, setForecast] = useState([]);
   const [IsLoading, setIsLoading] = useState(false);
   const [weather, setWeather] = useState([]);
+  useEffect(() => {
+    setIsLoading(true);
+    setAllcity(City.getCitiesOfCountry("IN"));
+    foreCastFeatch();
+    weatherFeatch();
+  }, []);
+
   const weatherFeatch = () => {
     setIsLoading(true);
     axios
@@ -48,11 +55,6 @@ const Details = () => {
         setIsLoading(false);
       });
   };
-  useEffect(() => {
-    setAllcity(City.getCitiesOfCountry("IN"));
-    foreCastFeatch();
-    weatherFeatch();
-  }, []);
 
   return (
     <div className={styles.main}>
